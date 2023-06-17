@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+     db:
+       build: ./db
+     apparel:
+       build: ./apparel
+       volumes:
+           - ./apparel:/app
+       ports:
+           - 5001:80
+       depends_on:
+           - db
+     prices:
+        build: ./prices
+        volumes:
+           - ./prices:/app
+        ports:
+           - 5002:80
+        depends_on:
+           - apparel
+       
