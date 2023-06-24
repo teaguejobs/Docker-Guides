@@ -1,0 +1,10 @@
+swarm 1
+ssh -i "devopsk8.pem" ubuntu@ec2-54-201-254-84.us-west-2.compute.amazonaws.com
+
+swarm 2
+ssh -i "devopsk8.pem" ubuntu@ec2-35-163-229-238.us-west-2.compute.amazonaws.com
+
+swarm 3
+ssh -i "devopsk8.pem" ubuntu@ec2-35-161-151-2.us-west-2.compute.amazonaws.com
+
+docker swarm join --token SWMTKN-1-3i3m2xuookqr94civ2p0u56uwjzhudqh2xhkqtndy4y0sbvmnb-7q06bqsmjpg9axpflj2945qcb 172.31.18.191:2377
